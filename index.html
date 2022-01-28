@@ -11,7 +11,7 @@
       onsubmit="return handleData()"
       id="form"
       action="/"
-      method="GET"
+      method="get"
       name="details"
     >
       <fieldset>
@@ -31,22 +31,22 @@
             </td>
             <td>Gender</td>
             <td>
-              <input
-                type="radio"
-                name="Gender"
-                id="female"
-                name="gender"
-                value="female"
-                required
-              />Female
-              <input
-                type="radio"
-                name="Gender"
-                id="male"
-                name="gender"
-                value="male"
-                required
-              />Male
+              <div id="rate_value">
+                <input
+                  type="radio"
+                  id="female"
+                  name="genders"
+                  value="female"
+                  required
+                />Female
+                <input
+                  type="radio"
+                  id="male"
+                  name="genders"
+                  value="male"
+                  required
+                />Male
+              </div>
             </td>
           </tr>
           <tr>
@@ -78,6 +78,7 @@
                 style="height: 106px; width: 222px"
                 id="Address"
                 name="address"
+                maxlength="300"
                 required
               >
               </textarea>

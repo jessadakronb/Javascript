@@ -9,6 +9,7 @@ function handleData() {
     return true;
   }
 }
+
 function hide() {
   document.getElementById('myTextarea').style.display = 'none';
 }
@@ -18,8 +19,10 @@ function show() {
 function display() {
   const firstnameinput = document.getElementById('firstname').value;
   const lastnameinput = document.getElementById('lastname').value;
-  const genderfemale = document.getElementById('female').value;
-  const gendermale = document.getElementById('male').value;
+  var radVal = document.details.genders.value;
+
+  // const radios = document.getElementsByName('genders').value;
+  // const gendermale = document.getElementById('male').value;
   const addressinput = document.getElementById('Address').value;
   const nationalitylist = document.getElementById('Cannadian').value;
   const medicationinput = document.getElementById('myTextarea').value;
@@ -35,6 +38,7 @@ function display() {
     }
   });
   console.log(result.toString());
+  console.log(radVal);
   // var a = document.details.fname.value;
   // var b = document.details.lname.value;
   // var c = document.details.gender.value;
@@ -44,17 +48,17 @@ function display() {
   // var g = document.details.nCannadian.value;
   // var h = document.details.textareas.value;
   alert(
-    'FIRST NAME:' +
+    'Firstname:' +
       firstnameinput +
       '     ' +
       'Lastname:' +
       lastnameinput +
+      // '     ' +
+      // 'Gender:' +
+      // genderfemale +
       '     ' +
       'Gender:' +
-      genderfemale +
-      '     ' +
-      'Gender:' +
-      gendermale +
+      radVal +
       '     ' +
       'Address:' +
       addressinput +
